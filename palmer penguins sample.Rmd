@@ -1,0 +1,25 @@
+---
+title: "palmer penguins sample"
+author: "hendra"
+date: '2022-03-20'
+output: html_document
+---
+
+## Setting up my environment
+Note : Setting up my R environment by loading the 'tidyverse' and 'palmerpenguins'
+packages
+
+```{r loading packages}
+library(ggplot2)
+library(palmerpenguins)
+```
+
+## Visualizations
+Here we will go through a series of visualizations
+
+### Flipper and body mass in purple
+Here, we plot fillper length  against body mass
+
+```{r visualize filpper length and body in purple}
+ggplot(data=penguins, aes(x=flipper_length_mm, y=body_mass_g))+
+  geom_point(color="purple")
